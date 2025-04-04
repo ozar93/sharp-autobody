@@ -6,8 +6,8 @@
   <style>
     body, html {
       margin: 0;
-      padding: 20px;
-      min-height: 100vh;
+      padding: 0;
+      height: 100vh;
       font-family: Arial, sans-serif;
       background: black url('sharp_background_adjusted.jpg') no-repeat center center fixed;
       background-size: cover;
@@ -21,8 +21,8 @@
     }
 
     .logo {
-      max-width: 600px;
-      margin-bottom: 30px;
+      max-width: 400px;
+      margin-bottom: 15px;
     }
 
     .fade-in {
@@ -30,9 +30,9 @@
       animation: fadeIn 2s ease-in-out forwards;
     }
 
-    .fade-in:nth-child(2) { animation-delay: 1s; }
-    .fade-in:nth-child(3) { animation-delay: 2s; }
-    .fade-in:nth-child(4) { animation-delay: 3s; }
+    .fade-in:nth-child(2) { animation-delay: 0.5s; }
+    .fade-in:nth-child(3) { animation-delay: 1s; }
+    .fade-in:nth-child(4) { animation-delay: 1.5s; }
 
     @keyframes fadeIn {
       to { opacity: 1; }
@@ -41,14 +41,14 @@
     a {
       color: black;
       text-decoration: none;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: bold;
-      margin: 15px 0;
+      margin: 10px 0;
       border: 2px solid black;
-      padding: 12px 25px;
+      padding: 10px 20px;
       border-radius: 10px;
       width: 80%;
-      max-width: 300px;
+      max-width: 250px;
       transition: background 0.3s, color 0.3s;
       display: block;
     }
@@ -59,10 +59,10 @@
     }
 
     .quote {
-      font-size: 1.8rem;
+      font-size: 1.2rem;
       font-style: italic;
       font-weight: bold;
-      margin-top: 25px;
+      margin-top: 15px;
     }
   </style>
 </head>
