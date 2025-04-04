@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sharp Autobody</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: black url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .logo {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .fade-in:nth-child(2) { animation-delay: 1s; }
+    .fade-in:nth-child(3) { animation-delay: 2s; }
+    .fade-in:nth-child(4) { animation-delay: 3s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 10px 0;
+      border: 1px solid white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    a:hover {
+      background: white;
+      color: black;
+    }
+
+    .quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <img src="logo.jpg" alt="Sharp Autobody Logo" class="logo fade-in" />
+  <a href="https://www.instagram.com/sharp.autobody" class="fade-in" target="_blank">Instagram</a>
+  <a href="https://www.yelp.com/biz/sharp-auto-body-garden-grove-2?osq=Sharp+Auto+Body" class="fade-in" target="_blank">Yelp</a>
+  <div class="quote fade-in">"Donde Rolie pinta nadie repinta"</div>
+</body>
+</html>
