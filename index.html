@@ -1,77 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharp Autobody</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: url('background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .content {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .logo.jpeg img {
-            width: 300px;
-            margin-bottom: 20px;
-        }
-        .links a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            margin: 10px 0;
-            border: 2px solid white;
-            padding: 10px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .links a:hover {
-            background: white;
-            color: white;
-        }
-        .slogan {
-            font-size: 18px;
-            margin-top: 10px;
-            font-style: italic;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sharp Autobody</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .content {
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .logo img {
+      width: 300px;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 2s;
+    }
+
+    .links a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      margin: 10px 0;
+      border: 2px solid white;
+      padding: 10px;
+      border-radius: 5px;
+      transition: 0.3s;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .links a:nth-child(1) { animation-delay: 2.5s; }
+    .links a:nth-child(2) { animation-delay: 3s; }
+    .links a:nth-child(3) { animation-delay: 3.5s; }
+
+    .links a:hover {
+      background: white;
+      color: black;
+    }
+
+    .slogan {
+      font-size: 18px;
+      margin-top: 10px;
+      font-style: italic;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 4s;
+    }
+  </style>
 </head>
 <body>
-    <div class="content" id="content">
-        <div class="logo">
-            <img src="logo.jpeg" alt="Sharp Autobody Logo">
-        </div>
-        <div class="links">
-            <a href="https://www.yelp.com/biz/sharp-auto-body-garden-grove-2?osq=Sharp+Auto+Body" target="_blank">Yelp</a>
-            <a href="https://www.instagram.com/sharp.autobody" target="_blank">Instagram</a>
-            <a href="https://www.tiktok.com/@sharp.autobody?_t=ZT-8w8TZ3SRvpb&_r=1" target="_blank">TikTok</a>
-        </div>
-        <div class="slogan">Donde Rolie pinta nadie repinta</div>
+  <div class="content">
+    <div class="logo">
+      <img src="logo.jpeg" alt="Sharp Autobody Logo" />
     </div>
-
-    <script>
-        window.onload = function() {
-            setTimeout(function() {
-                document.getElementById('content').style.display = 'flex';
-            }, 1500);
-        };
-    </script>
+    <div class="links">
+      <a href="https://www.yelp.com/biz/sharp-auto-body-garden-grove-2?osq=Sharp+Auto+Body" target="_blank">Yelp</a>
+      <a href="https://www.instagram.com/sharp.autobody" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@sharp.autobody?_t=ZT-8w8TZ3SRvpb&_r=1" target="_blank">TikTok</a>
+    </div>
+    <div class="slogan">Donde Rolie pinta nadie repinta</div>
+  </div>
 </body>
 </html>
