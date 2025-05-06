@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharp Autobody</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .logo img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px 0;
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .links a:hover {
+            background: white;
+            color: black;
+        }
+        .slogan {
+            font-size: 18px;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="content" id="content">
+        <div class="logo">
+            <img src="logo.jpg" alt="Sharp Autobody Logo">
+        </div>
+        <div class="links">
+            <a href="https://www.yelp.com/biz/sharp-auto-body-garden-grove-2?osq=Sharp+Auto+Body" target="_blank">Yelp</a>
+            <a href="https://www.instagram.com/sharp.autobody" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@sharp.autobody?_t=ZT-8w8TZ3SRvpb&_r=1" target="_blank">TikTok</a>
+        </div>
+        <div class="slogan">Donde Rolie pinta nadie repinta</div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('content').style.display = 'flex';
+            }, 1500);
+        };
+    </script>
+</body>
+</html>
