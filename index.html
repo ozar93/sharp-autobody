@@ -1,75 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      background: black url('sharp_background_adjusted.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
-      box-sizing: border-box;
-    }
-
-    .logo {
-      max-width: 400px;
-      margin-bottom: 15px;
-    }
-
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
-    }
-
-    .fade-in:nth-child(2) { animation-delay: 0.5s; }
-    .fade-in:nth-child(3) { animation-delay: 1s; }
-    .fade-in:nth-child(4) { animation-delay: 1.5s; }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
-    a {
-      color: black;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin: 10px 0;
-      border: 2px solid black;
-      padding: 10px 20px;
-      border-radius: 10px;
-      width: 80%;
-      max-width: 250px;
-      transition: background 0.3s, color 0.3s;
-      display: block;
-    }
-
-    a:hover {
-      background: black;
-      color: white;
-    }
-
-    .quote {
-      font-size: 1.2rem;
-      font-style: italic;
-      font-weight: bold;
-      margin-top: 15px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharp Autobody</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .logo img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px 0;
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .links a:hover {
+            background: white;
+            color: black;
+        }
+        .slogan {
+            font-size: 18px;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-  <img src="sharp_logo_transparent.png" alt="Sharp Autobody Logo" class="logo fade-in" />
-  <a href="https://www.instagram.com/sharp.autobody" class="fade-in" target="_blank">Instagram</a>
-  <a href="https://www.yelp.com/biz/sharp-auto-body-garden-grove-2?osq=Sharp+Auto+Body" class="fade-in" target="_blank">Yelp</a>
-  <div class="quote fade-in">"Donde Roly pinta nadie repinta"</div>
+    <div class="content" id="content">
+        <div class="logo">
+            <img src="logo.jpg" alt="Sharp Autobody Logo">
+        </div>
+        <div class="links">
+            <a href="https://www.yelp.com/biz/sharp-auto-body-garden-grove-2?osq=Sharp+Auto+Body" target="_blank">Yelp</a>
+            <a href="https://www.instagram.com/sharp.autobody" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@sharp.autobody?_t=ZT-8w8TZ3SRvpb&_r=1" target="_blank">TikTok</a>
+        </div>
+        <div class="slogan">Donde Rolie pinta nadie repinta</div>
+    </div>
+    
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('content').style.display = 'flex';
+            }, 1500); 
+        };
+    </script>
 </body>
 </html>
