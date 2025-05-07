@@ -8,15 +8,24 @@
     body {
       margin: 0;
       padding: 0;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
+      overflow: hidden;
+    }
+
+    #bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
 
     .content {
@@ -79,6 +88,13 @@
   </style>
 </head>
 <body>
+  <!-- Video background -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Main content -->
   <div class="content">
     <div class="logo">
       <img src="logo.jpeg" alt="Sharp Autobody Logo" />
